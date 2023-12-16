@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лабораторна робота №5</title>
+</head>
+<body>
+
+<form id="myForm" onsubmit="validateForm(); return false;">
+    <label for="fullName">ПІБ:</label>
+    <input type="text" id="fullName" name="fullName" required>
+    <br>
+
+    <label for="variant">Варіант:</label>
+    <input type="text" id="variant" name="variant" pattern="[0-9]{2}" title="Введіть дві цифри" required>
+    <br>
+
+    <label for="group">Група:</label>
+    <input type="text" id="group" name="group" pattern="[A-Z]{2}-[0-9]{2}" title="Введіть дві великі літери, тире, і дві цифри (наприклад, ТТ-ЧЧ)" required>
+    <br>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" pattern="\([0-9]{2,3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="Введіть телефон у форматі (ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ" required>
+    <br>
+
+    <label for="idCard">ID-card:</label>
+    <input type="text" id="idCard" name="idCard" pattern="[A-Z]{2} №[0-9]{6}" title="Введіть дві великі літери, пробіл, № і шість цифр (наприклад, ТТ №123456)" required>
+    <br>
+
+    <input type="submit" value="Відправити">
+</form>
+
+<div id="errorMessages" class="error"></div>
+
+<table id="myTable"></table>
+<div id="colorPickerContainer">
+    <label for="colorPicker">Оберіть колір:</label>
+    <input type="color" id="colorPicker" value="#FF0000">
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
